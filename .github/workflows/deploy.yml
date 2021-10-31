@@ -1,0 +1,27 @@
+name: Test & Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    name: Deploy plugin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Flutter
+        uses: subosito/flutter-action@v1
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Analyze
+        run: flutter analyze
+      - name: Run tests
+        run: flutter test
+      - name: Prepare pub credentials
+        run: echo '${{ secrets.PUB_CREDENTIALS }}' > "$PUB_CACHE/credentials.json"
+      - name: Check Publish Warnings
+        run: pub publish --dry-run
+      - name: Publish Package
+        run: pub publish -f
+      
