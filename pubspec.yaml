@@ -1,6 +1,6 @@
 name: monet_colors
 description: A Flutter plugin that exposes Monet (Material You, Material 3) system colors on Android 12.
-version: 0.9.0
+version: 0.9.1
 homepage: https://github.com/xiprox/monet_colors
 
 environment:
