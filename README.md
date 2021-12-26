@@ -1,5 +1,7 @@
+# DEPRECATED
+Use [dynamic_color](https://pub.dev/packages/dynamic_color) by the Material team.
 
-# Monet Colors
+## Monet Colors
 
 A Flutter plugin that exposes [Monet (Material You, Material 3)](https://m3.material.io/styles/color/dynamic-color/user-generated-color) [system colors](https://developer.android.com/reference/android/R.color#system_accent1_0) on Android 12. Returns `null` on unsupported platforms and leaves handling that to you. For a backwards compatible implementation, see [monet](https://pub.dev/packages/monet).
 
